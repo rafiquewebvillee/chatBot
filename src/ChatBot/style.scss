@@ -1,0 +1,152 @@
+.chatBotWrapper {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: -100%;
+  right: 15px;
+  width: 350px;
+  &.show {
+    transition: all 0.4s ease 0s;
+    opacity: 1;
+    visibility: visible;
+    bottom: 70px;
+  }
+}
+
+.bodyChat {
+    padding: 0px 0px 20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 50px rgb(0 0 0 / 8%);
+    border-radius: 18px;
+    overflow: hidden;
+  .headerChat {
+    color: #fff;
+    padding: 20px 30px 30px;
+    position: relative;
+    background: rgb(255,118,0);
+    background: linear-gradient(0deg, rgba(255,92,0,1) 0%, rgba(255,118,0,1) 100%);
+    &:after {
+        width: 100%;
+        height: 60px;
+        content: "";
+        background: rgb(255, 92, 0);
+        position: absolute;
+        bottom: -58px;
+        left: 0;
+    }
+    }
+    h2.assistance_name {
+      font-size: 30px;
+      margin: 0 0 7px 0;
+      font-weight: 700;
+    }
+    h4.assistanceGreeting {
+      font-size: 22px;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+    }
+    p.intro_assistance {
+      font-size: 18px;
+      line-height: 27px;
+      margin-top: 0;
+    }
+  }
+  .bodyChat_inner {
+    max-width: 290px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 5%);
+    border-radius: 8px;
+    border: 1px solid #E4E4E4;
+    padding: 30px 15px 10px;
+    position: relative;
+    img.assistanceIcon {
+        position: absolute;
+        top: -35px;
+        left: 13px;
+    }
+    p.classFreq {
+        color: #2D2D2D;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        img {
+            margin: 0 0 0 7px;
+        }
+    } 
+    .inputFreq {
+        position: relative;
+        border: 1px solid #E1E1E1;
+        box-shadow: 0px 0px 8px rgb(0 0 0 / 5%);
+        border-radius: 8px;
+        margin-bottom: 9px;
+        padding: 7px 0;
+        input.inputRadio {
+            position: absolute;
+            opacity: 0;
+            z-index: 99;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        label {
+            color: #2D2D2D;
+            font-size: 12px;
+            padding: 0 0 0 25px;
+            font-weight: 400;
+            position: relative;
+            &:before{
+                content: "";
+                position: absolute;
+                background: rgba(255, 118, 0, 0.15);
+                border-radius: 50%;
+                width: 5px;
+                height: 5px;
+                left: 5px;
+                top: 1px;
+                padding: 4px;
+            }
+            &:after{
+                background: rgba(255, 118, 0, 0.8);
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                left: 8px;
+                top: 4px;
+                border-radius: 51%;
+            }
+            
+        }
+        input.inputRadio:checked ~ label {
+            color: rgba(255, 118, 0, 0.8);
+                &:before{
+                    content: "";
+                    position: absolute;
+                    background: rgba(255, 118, 0, 0.8);
+                    border-radius: 50%;
+                    width: 5px;
+                    height: 5px;
+                    left: 5px;
+                    top: 1px;
+                    padding: 4px;
+                }
+                &:after{
+                    background: rgba(255, 118, 0, 0.15);
+                    content: "";
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    left: 8px;
+                    top: 4px;
+                    border-radius: 51%;
+                }
+        }
+    }
+}
+
