@@ -7,6 +7,7 @@ import { Animated } from "react-animated-css";
 function App() {
   const [chatBotShow, setChatBoatShow] = useState("")
   const [animation, setAnimation] = useState("")
+  const [closeIcon, setCloseIcon] = useState("")
   const clickChat = () => {
     //console.log("Clicked")
     setChatBoatShow(!chatBotShow)
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className='buttonChat' onClick={() => clickChat()}>
-        <h1>Test</h1>
+       <img alt="chatIcon" src="../Assets/Images/chatIcon.png" className='chatImg' />
       </div>
       <ChatBoat animation={animation} setAnimation={setAnimation} chatBotShow={chatBotShow} setChatBoatShow={setChatBoatShow} />
     </div>
