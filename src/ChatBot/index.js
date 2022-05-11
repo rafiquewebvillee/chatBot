@@ -1,5 +1,9 @@
 import { Animated } from "react-animated-css";
 import "./style.scss";
+import Hand from "./../Assets/Images/hand.png"
+import Assistance from "./../Assets/Images/assistance.png"
+import QuestionMark from "./../Assets/Images/questionMark.png"
+import ChatStart from "./../Assets/Images/chatStart.png"
 
 function ChatBoat(props) {
   console.log(props);
@@ -15,7 +19,7 @@ function ChatBoat(props) {
             </Animated>
             <Animated  className={props.animation ? "fadeInUp" : ""}  animationIn=""  animationInDuration={900} animationInDelay={900} animationOut="fadeOut" isVisible={true}>
               <h4 className="assistanceGreeting">
-                Hello <img className="ml-7" src="../Assets/Images/hand.png" alt="svg" />
+                Hello <img className="ml-7" src={Hand} alt="hAND" />
               </h4>
             </Animated>
             <Animated className={props.animation ? "fadeInUp" : ""}  animationIn=""  animationInDuration={1000} animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
@@ -31,11 +35,11 @@ function ChatBoat(props) {
              <Animated className={props.animation ? "fadeInUp" : ""}  animationIn="" animationInDuration={1300} animationInDelay={1100} animationOut="fadeOut" isVisible={true}>
              <img
               className="assistanceIcon"
-              src="../Assets/Images/assistance.png"
+              src={Assistance}
             />
             </Animated>
             <Animated className={props.animation ? "fadeInUp" : ""}  animationIn="" animationInDuration={1300} animationInDelay={1100} animationOut="fadeOut" isVisible={true}>
-             <p className="classFreq">Frequently Asked Questions <img alt="question" src="../Assets/Images/questionMark.png" /></p>
+             <p className="classFreq">Frequently Asked Questions <img alt="question" src={QuestionMark} /></p>
             </Animated>
             <Animated className={props.animation ? "fadeInUp" : ""}  animationIn=""  animationInDuration={1400} animationInDelay={1200} animationOut="fadeOut" isVisible={true}>
               <div className="inputFreq">
@@ -62,7 +66,7 @@ function ChatBoat(props) {
               </div>
             </Animated>
             <Animated className={props.animation ? "fadeInUp" : ""}  animationIn=""  animationInDuration={2500} animationInDelay={2500} animationOut="fadeOut" isVisible={true}>
-              <button className="btn btn-white"><img src="../../Assets/Images/chatStart.png" alt="start Chat" />Start a New Conversation</button>
+              <button className="btn btn-white"><img src={ChatStart} alt="start Chat" />Start a New Conversation</button>
             </Animated>
            
           </div>

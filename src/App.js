@@ -3,6 +3,8 @@ import './App.scss';
 import ChatBoat from './ChatBot';
 import { useState } from 'react';
 import { Animated } from "react-animated-css";
+import ChatIcon from "./Assets/Images/chaticon.png"
+import CloseIcon from "./Assets/Images/close-icon.png"
 
 function App() {
   const [chatBotShow, setChatBoatShow] = useState("")
@@ -16,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <div className='buttonChat' onClick={() => clickChat()}>
-       <img alt="chatIcon" src="../Assets/Images/chatIcon.png" className='chatImg' />
+       <img alt="chatIcon" src={ChatIcon} className={`chatImg ${chatBotShow ? "" : "show"}`} />
+       <img alt="chatIcon" src={CloseIcon} className={`chatImg ${chatBotShow ? "show" : ""}`} />
       </div>
       <ChatBoat animation={animation} setAnimation={setAnimation} chatBotShow={chatBotShow} setChatBoatShow={setChatBoatShow} />
     </div>
